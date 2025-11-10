@@ -1,3 +1,4 @@
+# fichiers sensibles
+*.env
+APIKeys.env
 .env
-APIKey.env
-.venv
