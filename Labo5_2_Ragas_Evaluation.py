@@ -163,3 +163,4 @@ async def evaluate_samples():
 # exécuter l’évaluation
 asyncio.run(evaluate_samples())
 
+#  really weird why it is nor woriking, error when evaluating , json expected... i din't find a solution f...eval
