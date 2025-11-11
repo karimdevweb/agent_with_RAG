@@ -49,7 +49,7 @@ import os
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 #  expose api key in env, not working if it is a variable varkey=load_dotenv()
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBuG5ZfnCyhmGQiX8Q6aDsHbTJxD8F3ugw"
+os.environ["GOOGLE_API_KEY"] = "AI exemple api key ugw"
 
 model = init_chat_model("google_genai:gemini-2.5-flash" ,     
             # response_mime_type= "application/json"
