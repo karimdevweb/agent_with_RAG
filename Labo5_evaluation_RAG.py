@@ -49,7 +49,7 @@ import os
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 #  expose api key in env, not working if it is a variable varkey=load_dotenv()
-os.environ["GOOGLE_API_KEY"] = "AIfdf exemple api key TJxD8F3ugw"
+os.environ["GOOGLE_API_KEY"] = "A exemple api key ugw"
 
 model = init_chat_model("google_genai:gemini-2.0-flash-lite")
 
@@ -57,7 +57,7 @@ model = init_chat_model("google_genai:gemini-2.0-flash-lite")
 @tool(response_format="content_and_artifact")
 def retrieve_context(query: str):
     """Retrieve information to help answer a query."""
-    retrieved_docs = vectordb.similarity_search(query, k=2)
+    retrieved_docs = vectordb.similarity_search(query, k=3)
     serialized = "\n\n".join(
         (f"Source: {doc.metadata}\nContent: {doc.page_content}")
         for doc in retrieved_docs
@@ -99,7 +99,7 @@ ground_truths = [
     "this documents describe how to prepare some receipes, it gives back the ingredients and instructions to follow for backing delicious desserts.",
     "the second recipe elaborate the beef in beer dish",
     "Raw beef, roll it in the flour...fry 4-­‐5 pieces at a time in a hot saucepan to cut the onions into quarters...fry in	the	same frying	pan	as the beef...to soak up the juices.",
-    "thei green curry is the fourth recipe",
+    "thai green curry is the fourth recipe",
     "yes, the sixth recipe is vegetarian and the main ingredient is rice"
 ]
 query = (
